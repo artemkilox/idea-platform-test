@@ -1,0 +1,195 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../resources/fonts/Roboto-Medium.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-size: 1em;
+  font-weight: 400;
+}
+* .App .main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: #eaeaf1;
+}
+* .App .main-container .header {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+* .App .main-container .header .logo {
+  height: 64px;
+  width: 64px;
+  filter: drop-shadow(3px 5px 4px rgba(0, 0, 0, 0.2));
+}
+* .App .main-container .tickets-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  height: 80%;
+}
+* .App .main-container .tickets-container .filters {
+  width: 280px;
+  height: fit-content;
+  box-shadow: 0 0 8px #dadada;
+  padding: 20px 0;
+  background: #fff;
+  border-radius: 5px;
+}
+* .App .main-container .tickets-container .filters .filter {
+  margin-bottom: 20px;
+}
+* .App .main-container .tickets-container .filters .filter .filter-name {
+  margin: 0 20px;
+  text-transform: uppercase;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body {
+  margin-top: 16px;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .val-section {
+  margin: 0 20px;
+  display: flex;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .val-section .val {
+  padding: 12px 20px;
+  border: 1px solid #e4e4e4;
+  color: #35a9ff;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .val-section .val:first-child {
+  border-radius: 4px 0 0 4px;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .val-section .val:last-child {
+  border-radius: 0 4px 4px 0;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .val-section .val:hover {
+  border: 1px solid #35a9ff;
+  background: rgba(53, 169, 255, 0.1);
+  cursor: pointer;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .val-section .active-val {
+  border: 1px solid #35a9ff;
+  background: #35a9ff;
+  cursor: pointer;
+  color: #ffffff;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .val-section .active-val:hover {
+  background: rgba(53, 169, 255, 0.8);
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .checkbox-wrapper {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .checkbox-wrapper .check-text-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .checkbox-wrapper .check-text-wrapper .checkbox-square {
+  border: 1px solid #9d9d9d;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .checkbox-wrapper .check-text-wrapper .active-square {
+  border: 1px solid #35a9ff;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .checkbox-wrapper .check-text-wrapper .checkbox-text {
+  margin-left: 16px;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .checkbox-wrapper .only {
+  display: none;
+  text-transform: uppercase;
+  color: #35a9ff;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .checkbox-wrapper .only:hover {
+  cursor: pointer;
+  color: rgba(53, 169, 255, 0.6);
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .checkbox-wrapper:hover {
+  background: rgba(53, 169, 255, 0.1);
+  cursor: pointer;
+}
+* .App .main-container .tickets-container .filters .filter .filter-body .checkbox-wrapper:hover .only {
+  display: block;
+}
+* .App .main-container .tickets-container .placeholder {
+  height: 400px;
+  font-size: 2em;
+}
+* .App .main-container .tickets-container .tickets {
+  margin-left: 40px;
+  overflow-y: scroll;
+}
+* .App .main-container .tickets-container .tickets .placeholder {
+  width: 760px;
+  height: auto;
+  text-align: center;
+  padding: 20px 40px;
+  background: #fff;
+  border-radius: 8px;
+  display: none;
+}
+* .App .main-container .tickets-container .tickets:not(:has(div.ticket)) .placeholder {
+  display: block;
+}
+* .App .main-container .tickets-container .tickets .ticket {
+  width: 760px;
+  margin-bottom: 24px;
+  padding: 20px 40px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #dadada;
+  display: flex;
+}
+* .App .main-container .tickets-container .tickets .ticket .left-side {
+  padding-right: 30px;
+  border-right: 1px solid #e3e3e3;
+  display: flex;
+  flex-direction: column;
+}
+* .App .main-container .tickets-container .tickets .ticket .left-side .com-logo {
+  height: 44px;
+}
+* .App .main-container .tickets-container .tickets .ticket .left-side .buy-button {
+  margin-top: 20px;
+  padding: 8px;
+  font-size: 1.2em;
+  background: #f87d4b;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+}
+* .App .main-container .tickets-container .tickets .ticket .left-side .buy-button:hover {
+  background: #fc6126;
+  cursor: pointer;
+}
+* .App .main-container .tickets-container .tickets .ticket .right-side {
+  margin-left: 30px;
+  display: flex;
+  gap: 20px;
+}
+* .App .main-container .tickets-container .tickets .ticket .right-side .station .time {
+  font-size: 2em;
+}
+* .App .main-container .tickets-container .tickets .ticket .right-side .station .date {
+  color: #9d9d9d;
+}
+* .App .main-container .tickets-container .tickets .ticket .right-side .transfer .trans-quan {
+  text-align: center;
+}
+* .App .main-container .tickets-container .tickets .ticket .right-side .transfer .trans-img {
+  height: 16px;
+}
+
+/*# sourceMappingURL=styles.css.map */

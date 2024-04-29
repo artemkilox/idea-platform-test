@@ -1,0 +1,232 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../resources/fonts/Roboto-Medium.ttf');
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+  font-size: 1em;
+  font-weight: 400;
+
+  .App{
+
+    .main-container{
+      display: flex;
+      flex-direction: column;
+      //justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      background: #eaeaf1;
+
+      .header{
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .logo{
+          height: 64px;
+          width: 64px;
+          filter: drop-shadow( 3px 5px 4px rgba(0, 0, 0, .2));
+        }
+      }
+
+      .tickets-container{
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        height: 80%;
+
+        .filters{
+          width: 280px;
+          height: fit-content;
+          box-shadow: 0 0 8px #dadada;
+          padding: 20px 0;
+          background: #fff;
+          border-radius: 5px;
+          .filter{
+            margin-bottom: 20px;
+            .filter-name{
+              margin: 0 20px;
+              text-transform: uppercase;
+            }
+            .filter-body{
+              margin-top: 16px;
+              .val-section{
+                margin: 0 20px;
+                display: flex;
+                .val{
+                  padding: 12px 20px;
+                  border: 1px solid #e4e4e4;
+                  color: #35a9ff;
+
+                  &:first-child{
+                    border-radius: 4px 0 0 4px;
+                  }
+                  &:last-child{
+                    border-radius: 0 4px 4px 0;
+                  }
+                  &:hover{
+                    border: 1px solid #35a9ff;
+                    background: rgba(53, 169, 255, 0.1);
+                    cursor: pointer;
+                  }
+                }
+                .active-val{
+                  border: 1px solid #35a9ff;
+                  background: #35a9ff;
+                  cursor: pointer;
+                  color: #ffffff;
+
+                  &:hover{
+                    background: rgba(53, 169, 255, 0.8);
+                  }
+                }
+              }
+
+              .checkbox-wrapper{
+                padding: 10px 20px;
+                display: flex;
+                align-items: center;
+
+
+                .check-text-wrapper{
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  height: 32px;
+
+                  .checkbox-square{
+                    border: 1px solid #9d9d9d;
+                    border-radius: 6px;
+                    width: 28px;
+                    height: 28px;
+                    padding: 6px;
+                    display: flex;
+                    justify-content: center;
+
+                    .checkbox-flag{
+
+                    }
+                  }
+                  .active-square{
+                    border: 1px solid #35a9ff;
+                  }
+
+                  .checkbox-text{
+                    margin-left: 16px;
+                  }
+                }
+
+                .only{
+                  display: none;
+                  text-transform: uppercase;
+                  color: #35a9ff;
+
+                  &:hover{
+                    cursor: pointer;
+                    color: rgba(53, 169, 255, 0.6);
+                  }
+                }
+
+                &:hover{
+                  background: rgba(53, 169, 255, 0.1);
+                  cursor: pointer;
+                }
+                &:hover .only{
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+
+        .placeholder{
+          height: 400px;
+          font-size: 2em;
+        }
+
+        .tickets{
+          margin-left: 40px;
+          overflow-y: scroll;
+
+          .placeholder{
+            width: 760px;
+            height: auto;
+            text-align: center;
+            padding: 20px 40px;
+            background: #fff;
+            border-radius: 8px;
+            display: none;
+          }
+
+          &:not(:has(div.ticket)) .placeholder{
+            display: block;
+          }
+
+          .ticket{
+            width: 760px;
+            margin-bottom: 24px;
+            padding: 20px 40px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 8px #dadada;
+            display: flex;
+
+            .left-side{
+              padding-right: 30px;
+              border-right: 1px solid #e3e3e3;
+              display: flex;
+              flex-direction: column;
+              .com-logo{
+                height: 44px;
+              }
+              .buy-button{
+                margin-top: 20px;
+                padding: 8px;
+                font-size: 1.2em;
+                background: #f87d4b;
+                color: #ffffff;
+                border-radius: 5px;
+                border: none;
+
+                &:hover{
+                  background: #fc6126;
+                  cursor: pointer;
+                }
+              }
+            }
+
+            .right-side{
+              margin-left: 30px;
+              display: flex;
+              gap: 20px;
+              .station{
+                .time{
+                  font-size: 2em;
+                }
+                .city{
+
+                }
+                .date{
+                  color: #9d9d9d;
+                }
+              }
+
+              .transfer{
+                .trans-quan{
+                  text-align: center;
+                }
+                .trans-img{
+                  height: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
