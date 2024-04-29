@@ -10,9 +10,6 @@ const MultiRangeSlider = ({ min, max, onChange, reset, setReset}) => {
     const maxValRef = useRef(null);
     const range = useRef(null);
 
-    const sliderWidth = 220
-    const startPosition = 0
-
     useEffect(() => {
         if(reset === true){
             setMinVal(min)
